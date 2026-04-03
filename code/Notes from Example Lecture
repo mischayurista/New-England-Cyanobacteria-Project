@@ -1,0 +1,48 @@
+Commands Given in Example Lecture
+
+# !/bin/bash
+conda activate genomics
+
+cd ~/myrepo
+
+## make output directories. Only need to do once
+mkdir -p poly-G-trimmed html results metadata data/fastqs
+
+## New polyG filter only
+cd data/fastqs
+
+polyg_lens=200 ## coppied from qiime2_parameters.sh
+
+### Run polyG filter. This will remove polyG tails and also filter out reads that are too short after 
+chmod +x ../code/polyGfilter.sh
+../code/polyGfilter.sh ${polyg_len}
+
+## or, similarly, you could run it like this 
+./code/polyGfilter.sh 200
+
+## four loop for variable
+for f do ???????
+
+fastp \
+--in1 $f \
+--html html/${f%_L002_R1_001.fastq.gz}.html \
+--out1 poly-G-trimmed/$f \
+--out2 poly-G-trimmed/$r \
+--cut_tail \
+--poly_g_min_len 4 \
+--cut_tail_mean_quality 25 \
+--cut_taul_window_size 2 \
+--disable_adapter_trimming \
+-l ${1} \
+-g -Q
+
+done ?????
+
+# !/bin/bash
+primer="16s_V4-V5"
+projname="YOURPROJ_${primer}"
+overlap=10
+
+## example: projname="Cyanobac_16s_V4-V5"
+
+## 
