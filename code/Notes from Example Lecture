@@ -11,7 +11,7 @@ mkdir -p poly-G-trimmed html results metadata data/fastqs
 ## New polyG filter only
 cd data/fastqs
 
-polyg_lens=200 ## coppied from qiime2_parameters.sh
+polyg_lens=200 ## copied from qiime2_parameters.sh
 
 ### Run polyG filter. This will remove polyG tails and also filter out reads that are too short after 
 chmod +x ../code/polyGfilter.sh
