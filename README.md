@@ -36,14 +36,23 @@ Figure 3. Principal Coordinate Analysis (PCoA) using weighted UniFrac distance m
 Key Observations:
 
 Community-level separation: Both unweighted and weighted UniFrac analyses show clear clustering of AIR vs WLW samples, confirming that cyanobacterial communities in aerosol fractions are fundamentally distinct
+
 Rare taxa composition: The unweighted UniFrac clustering demonstrates that aerosol samples contain unique, less abundant cyanobacterial taxa
+
 Dominant taxa variation: The weighted UniFrac plot reveals that aerosol samples also have variable dominant taxa, suggesting environmental or size-based sorting of the community
+
 Lake-specific patterns: Samples cluster by lake (EW, TK, VP), indicating that each lake maintains a distinct cyanobacterial community signature
+
 Control quality: Sample controls (NTC, PAC) appear appropriately distinct from environmental samples, validating the quality of our analysis
+
 Size-fractionation effect: The consistency of AIR vs WLW separation across both metrics strongly supports the hypothesis that aerosolizable cyanobacteria represent a distinct, size-selected subset of the broader lake community
+
 
 ## References
 Bolyen, E., Rideout, J. R., Dillon, M. R., et al. (2019). Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2. Nature Biotechnology, 37(8), 852–857.
+
 Chen, S., Zhou, Y., Chen, Y., & Gu, J. (2023). Fastp: an ultra-fast all-in-one FASTQ preprocessor. Bioinformatics, 34(17), i884–i890.
+
 Fobel, R., et al. (2014). Chronic neurological disease associated to cyanobacterial toxins. Neurology, 88(16 Supplement), P5.086.
+
 Merrill, S., Desai, K., Carney, A., et al. (2022). Small, toxic: cyanobacterial toxins in aerosolized water. International Journal of Molecular Sciences, 22(16), 8726.
