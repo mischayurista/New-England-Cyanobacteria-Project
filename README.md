@@ -22,15 +22,26 @@ Taxonomic Classification (04_classify.sh): Classification of ASVs using SILVA 16
 All code is version controlled and available in the code/ directory of this repository for reproducibility.
 ## Findings
 ![Taxa Barplot](plots/taxa-barplot.png)
-Figure 1. 
-Quality control and taxonomic composition analyses revealed the distribution of cyanobacterial communities across aerosol and water sample types.
-Figure 1. Taxonomic composition of cyanobacterial ASVs across sample types. Visualization generated using QIIME2's built-in taxonomy bar plot tool. ASVs were assigned to operational taxonomic units (OTUs) based on 99% sequence similarity to the SILVA reference database. This figure highlights the relative abundance of cyanobacterial taxa in aerosolized samples (AIR) versus whole water samples (WLW) from three lakes (EW, TK, VP), demonstrating differential representation of taxa between aerosol and non-aerosol fractions.
-Key Observations:
-1. Specific cyanobacterial taxa were enriched in aerosol samples relative to whole water, suggesting size-fractionation of the cyanobacterial community
-2. Sample controls (NTC, PAC) showed minimal contamination, validating the quality of our analysis
-3. Community composition varied between lakes, reflecting distinct environmental conditions at each sampling site
 
-These results support the hypothesis that pico-scale cyanobacteria capable of aerosolizing are a distinct subset of the broader lake cyanobacterial community. Further work should investigate the toxin-producing potential of aerosolized taxa and assess long-term health impacts from chronic inhalation exposure in affected lake regions.
+Figure 1. Taxonomic composition of cyanobacterial ASVs across sample types. This interactive QIIME2 visualization shows the relative abundance of cyanobacterial taxa across all samples. ASVs were assigned to operational taxonomic units (OTUs) based on 99% sequence similarity to the SILVA reference database. The bar plot highlights relative abundance patterns in aerosolized samples (AIR) versus whole water samples (WLW) from three lakes (EW, TK, VP), demonstrating differential representation of taxa between aerosol and non-aerosol fractions.
+
+![Taxa Barplot](plots/UnweightedEmperorPCA.png)
+
+Figure 2. Principal Coordinate Analysis (PCoA) using unweighted UniFrac distance metric. This plot reveals differences in cyanobacterial community composition based on the presence/absence of taxa, regardless of abundance. Clear clustering patterns emerge: aerosolized samples (AIR-EW, AIR-TK, AIR-VP in red/orange/tan) cluster distinctly on the left side of the plot, while whole water samples (WLW-EW, WLW-TK, WLW-VP in purple) cluster on the right. This strong separation indicates that aerosol samples contain a fundamentally different set of rare and unique cyanobacterial taxa compared to whole water samples. Controls (PAC in green, and others) appear as expected outliers.
+
+![Taxa Barplot](plots/WeightedEmperorPCA.png)
+
+Figure 3. Principal Coordinate Analysis (PCoA) using weighted UniFrac distance metric. This metric incorporates both presence/absence and relative abundance of taxa. Notably, aerosol samples show greater dispersion (spread) than in the unweighted analysis, suggesting variable dominant taxa within the aerosolized community. The overall separation between AIR and WLW samples persists, confirming that abundant cyanobacterial taxa also differ between aerosol and non-aerosol fractions. Axis 1 explains 37.72% of the variance, indicating strong differentiation between sample types based on dominant taxa composition.
+
+Key Observations:
+
+Community-level separation: Both unweighted and weighted UniFrac analyses show clear clustering of AIR vs WLW samples, confirming that cyanobacterial communities in aerosol fractions are fundamentally distinct
+Rare taxa composition: The unweighted UniFrac clustering demonstrates that aerosol samples contain unique, less abundant cyanobacterial taxa
+Dominant taxa variation: The weighted UniFrac plot reveals that aerosol samples also have variable dominant taxa, suggesting environmental or size-based sorting of the community
+Lake-specific patterns: Samples cluster by lake (EW, TK, VP), indicating that each lake maintains a distinct cyanobacterial community signature
+Control quality: Sample controls (NTC, PAC) appear appropriately distinct from environmental samples, validating the quality of our analysis
+Size-fractionation effect: The consistency of AIR vs WLW separation across both metrics strongly supports the hypothesis that aerosolizable cyanobacteria represent a distinct, size-selected subset of the broader lake community
+
 ## References
 Bolyen, E., Rideout, J. R., Dillon, M. R., et al. (2019). Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2. Nature Biotechnology, 37(8), 852–857.
 Chen, S., Zhou, Y., Chen, Y., & Gu, J. (2023). Fastp: an ultra-fast all-in-one FASTQ preprocessor. Bioinformatics, 34(17), i884–i890.
