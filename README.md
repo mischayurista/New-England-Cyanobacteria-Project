@@ -21,6 +21,7 @@ Taxonomic Classification (04_classify.sh): Classification of ASVs using SILVA 16
 
 All code is version controlled and available in the code/ directory of this repository for reproducibility.
 ## Findings
+![Taxa Barplot](plots/taxa-barplot.png)
 Figure 1. 
 Quality control and taxonomic composition analyses revealed the distribution of cyanobacterial communities across aerosol and water sample types.
 Figure 1. Taxonomic composition of cyanobacterial ASVs across sample types. Visualization generated using QIIME2's built-in taxonomy bar plot tool. ASVs were assigned to operational taxonomic units (OTUs) based on 99% sequence similarity to the SILVA reference database. This figure highlights the relative abundance of cyanobacterial taxa in aerosolized samples (AIR) versus whole water samples (WLW) from three lakes (EW, TK, VP), demonstrating differential representation of taxa between aerosol and non-aerosol fractions.
